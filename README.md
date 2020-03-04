@@ -30,7 +30,7 @@ mkdir update-models
 ```
 python3 comment_update.py -data_path public_comment_update_data/comment_update/ -model_path update-models/model.pkl.gz
 ```
-8. Evaluate the comment update model (i.e., edit model)l:
+8. Evaluate the comment update model (i.e., edit model):
 ```
 python3 comment_update.py -data_path public_comment_update_data/comment_update/ -model_path update-models/model.pkl.gz --test_mode --rerank
 ```
