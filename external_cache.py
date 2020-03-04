@@ -7,10 +7,10 @@ import re
 
 from diff_utils import *
 
-with open('../pytorch-comment-update/resources/method_details.json') as f:
+with open('resources/method_details.json') as f:
     method_details = json.load(f)
 
-with open('../pytorch-comment-update/resources/tokenization_features.json') as f:
+with open('resources/tokenization_features.json') as f:
     tokenization_features = json.load(f)
 
 stop_words = set(stopwords.words('english'))
