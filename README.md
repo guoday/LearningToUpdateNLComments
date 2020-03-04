@@ -22,11 +22,15 @@ mkdir embeddings
 ```
 python3 comment_generation.py -data_path public_comment_update_data/full_comment_generation/ -model_path generation-models/model.pkl.gz --test_mode --get_embeddings
 ```
-6. Train the comment update model (i.e., edit model):
+6. Create a directory named `update-models` in the root directory
+```
+mkdir update-models
+```
+7. Train the comment update model (i.e., edit model):
 ```
 python3 comment_update.py -data_path public_comment_update_data/comment_update/ -model_path update-models/model.pkl.gz
 ```
-3. Evaluate the comment update model (i.e., edit model)l:
+8. Evaluate the comment update model (i.e., edit model)l:
 ```
 python3 comment_update.py -data_path public_comment_update_data/comment_update/ -model_path update-models/model.pkl.gz --test_mode --rerank
 ```
