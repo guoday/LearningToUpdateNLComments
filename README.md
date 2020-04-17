@@ -1,5 +1,19 @@
 # Learning to Update Natural Language Comments Based on Code Changes
 
+**Code and datasets for our ACL-2020 paper "Learning to Update Natural Language Comments Based on Code Changes", which can be found.**
+
+If you find this work useful, please consider citing our paper:
+
+```
+@inproceedings{PanthaplackelETAL20CommentUpdate,
+  author = {Panthaplackel, Sheena and Nie, Pengyu and Gligoric, Milos and Li, Junyi Jessy and Mooney, Raymond J.},
+  title = {Learning to Update Natural Language Comments Based on Code Changes},
+  booktitle = {Association for Computational Linguistics},
+  pages = {To appear},
+  year = {2020},
+}
+```
+
 Download generation and update data from here [here](https://drive.google.com/open?id=12VMmdE67bp5UFYIoBUf0ibKGXFCH6fQo).
 
 1. Create a directory named `generation-models` in the root directory
