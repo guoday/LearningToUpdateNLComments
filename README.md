@@ -1,6 +1,6 @@
 # Learning to Update Natural Language Comments Based on Code Changes
 
-**Code and datasets for our ACL-2020 paper "Learning to Update Natural Language Comments Based on Code Changes", which can be found.**
+**Code and datasets for our ACL-2020 paper "Learning to Update Natural Language Comments Based on Code Changes"**
 
 If you find this work useful, please consider citing our paper:
 
