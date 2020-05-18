@@ -14,7 +14,7 @@ If you find this work useful, please consider citing our paper:
 }
 ```
 
-Download generation and update data from here [here](https://drive.google.com/open?id=12VMmdE67bp5UFYIoBUf0ibKGXFCH6fQo).
+Download generation and update data from [here](https://drive.google.com/open?id=12VMmdE67bp5UFYIoBUf0ibKGXFCH6fQo).
 
 1. Create a directory named `generation-models` in the root directory
 ```
@@ -40,11 +40,12 @@ python3 comment_generation.py -data_path public_comment_update_data/full_comment
 ```
 mkdir update-models
 ```
-7. Train the comment update model (i.e., edit model):
+7. Download resources folder from [here] (https://drive.google.com/drive/folders/1YZB7FK58LcDCpabj7hlD5vQx_axbdBCQ?usp=sharing), and move it to the root directory.
+8. Train the comment update model (i.e., edit model):
 ```
 python3 comment_update.py -data_path public_comment_update_data/comment_update/ -model_path update-models/model.pkl.gz
 ```
-8. Evaluate the comment update model (i.e., edit model):
+9. Evaluate the comment update model (i.e., edit model):
 ```
 python3 comment_update.py -data_path public_comment_update_data/comment_update/ -model_path update-models/model.pkl.gz --test_mode --rerank
 ```
