@@ -40,7 +40,7 @@ python3 comment_generation.py -data_path public_comment_update_data/full_comment
 ```
 mkdir update-models
 ```
-7. Download resources folder from [here] (https://drive.google.com/drive/folders/1YZB7FK58LcDCpabj7hlD5vQx_axbdBCQ?usp=sharing), and move it to the root directory.
+7. Download resources folder from [here](https://drive.google.com/drive/folders/1YZB7FK58LcDCpabj7hlD5vQx_axbdBCQ?usp=sharing), and move it to the root directory.
 8. Train the comment update model (i.e., edit model):
 ```
 python3 comment_update.py -data_path public_comment_update_data/comment_update/ -model_path update-models/model.pkl.gz
