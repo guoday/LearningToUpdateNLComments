@@ -156,7 +156,7 @@ def get_code_features(code_sequence, example, max_code_length):
         if token in old_nl_tokens:
             features[i][11] = True
         
-        if is_edit_keyword(token):
+        if not is_edit_keyword(token):
             if last_command == KEEP:
                 features[i][12] = 1
             elif last_command == INSERT:
