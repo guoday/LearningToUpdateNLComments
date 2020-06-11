@@ -68,12 +68,6 @@ def get_new_return_sequence(example):
 def get_old_return_sequence(example):
     return method_details[example.id]['old_return_sequence']
 
-def get_old_argument_identifiers(example):
-    return method_details[example.id]['old_argument_identifiers']
-
-def get_new_argument_identifiers(example):
-    return method_details[example.id]['new_argument_identifiers']
-
 def get_old_code(example):
     return method_details[example.id]['old_code']
 
@@ -85,9 +79,6 @@ def get_edit_span_subtoken_tokenization_labels(example):
 
 def get_edit_span_subtoken_tokenization_indices(example):
     return tokenization_features[example.id]['edit_span_subtoken_indices']
-
-def get_edit_ast_features(example):
-    return tokenization_features[example.id]['edit_ast_features']
 
 def get_nl_subtoken_tokenization_labels(example):
     return tokenization_features[example.id]['old_nl_subtoken_labels']
@@ -112,11 +103,6 @@ def get_code_features(code_sequence, example, max_code_length):
 
     intersection = old_set.intersection(new_set)
 
-    old_argument_set = set(get_old_argument_identifiers(example))
-    new_argument_set = set(get_new_argument_identifiers(example))
-    
-    argument_intersection = old_argument_set.intersection(new_argument_set)
-
     features = np.zeros((max_code_length, NUM_CODE_FEATURES), dtype=np.bool)
 
     old_nl_tokens = set(example.old_comment_tokens)
@@ -124,7 +110,6 @@ def get_code_features(code_sequence, example, max_code_length):
 
     edit_span_subtoken_labels = get_edit_span_subtoken_tokenization_labels(example)
     edit_span_subtoken_indices = get_edit_span_subtoken_tokenization_indices(example)
-    edit_span_ast_features = get_edit_ast_features(example)
 
     for i, token in enumerate(code_sequence):
         if i >= max_code_length:
@@ -231,11 +216,6 @@ def get_nl_features(old_nl_sequence, example, max_nl_length):
     intersection = old_set.intersection(new_set)
 
     method_name_subtokens = method_name_subtokens = get_method_name_subtokens(example)
-
-    old_argument_set = set(get_old_argument_identifiers(example))
-    new_argument_set = set(get_new_argument_identifiers(example))
-    
-    argument_intersection = old_argument_set.intersection(new_argument_set)
 
     nl_subtoken_labels = get_nl_subtoken_tokenization_labels(example)
     nl_subtoken_indices = get_nl_subtoken_tokenization_indices(example)
