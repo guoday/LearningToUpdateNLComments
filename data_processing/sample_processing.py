@@ -53,7 +53,7 @@ method_details[example.id]['new_return_sequence'], _, _ = subtokenize_code(' '.j
 method_details[example.id]['old_code'] = old_code
 method_details[example.id]['new_code'] = new_code
 
-# Should be stored in 'resources/tokenization_features.json' for ever example, by id
+# Should be stored in 'resources/tokenization_features.json' for every example, by id
 tokenization_features = dict()
 tokenization_features[example.id] = dict()
 tokenization_features[example.id]['edit_span_subtoken_labels'] = span_diff_labels
