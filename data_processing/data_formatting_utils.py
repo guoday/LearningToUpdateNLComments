@@ -128,7 +128,7 @@ def compute_code_diff_spans(old_tokens, old_labels, old_indices, new_tokens, new
         elif edit_type == 'replace':
             spans.extend([REPLACE_OLD] + old_tokens[o_start:o_end] + [REPLACE_NEW] + new_tokens[n_start:n_end] + [REPLACE_END])
             labels.extend([0] + old_labels[o_start:o_end] + [0] + new_labels[n_start:n_end] + [0])
-            indices.extend([0] + old_indices[o_start:o_end] + [0] + old_indices[o_start:o_end] + [0])
+            indices.extend([0] + old_indices[o_start:o_end] + [0] + new_indices[n_start:n_end] + [0])
         elif edit_type == 'insert':
             spans.extend([INSERT] + new_tokens[n_start:n_end] + [INSERT_END])
             labels.extend([0] + new_labels[n_start:n_end] + [0])
